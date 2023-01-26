@@ -33,7 +33,7 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                       'n_layers': n_layers,
                       'num_heads': num_heads,
                       'state_dict': model.state_dict()}
-        torch.save(checkpoint, 'checkpoint.pth')
+        torch.save(checkpoint, 'model_checkpoints/checkpoint.pth')
 
 def load_model_from_checkpoint(checkpoint_path):
     checkpoint = torch.load(checkpoint_path)
