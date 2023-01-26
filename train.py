@@ -27,7 +27,23 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                 optimizer.step()
                 cur_batch += 1
                 pbar.set_postfix(**{"batch: ": f"{cur_batch} / {total_batches}", "loss:": loss.item()})
+        checkpoint = {'vocab_size': tokenizer.vocab_size,
+                      'embed_dim': embed_dim,
+                      'model_dim': model_dim,
+                      'n_layers': n_layers,
+                      'num_heads': num_heads,
+                      'state_dict': model.state_dict()}
+        torch.save(checkpoint, 'checkpoint.pth')
 
+def load_model_from_checkpoint(checkpoint_path):
+    checkpoint = torch.load(checkpoint_path)
+    model = EncoderModel(vocab_size=checkpoint['vocab_size'], 
+                         embed_dim=checkpoint['embed_dim'], 
+                         model_dim=checkpoint['model_dim'], 
+                         n_layers=checkpoint['n_layers'], 
+                         num_heads=checkpoint['num_heads'])
+    model.load_state_dict(checkpoint['state_dict'])
+    return model
 
 if __name__ == "__main__":
     
