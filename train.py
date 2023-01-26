@@ -4,6 +4,9 @@ from torch.utils.data import TensorDataset, DataLoader
 import torch
 from tqdm import tqdm
 
+'''
+Same content as train.ipynb
+'''
 
 def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu')):
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
