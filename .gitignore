@@ -1,2 +1,5 @@
 # ignore pycache
 __pycache__/
+
+# ignore model_checkpoints
+model_checkpoints/

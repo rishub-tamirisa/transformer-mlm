@@ -9,7 +9,11 @@ class EncoderModel(nn.Module):
         self.embedding = nn.Embedding(vocab_size, embed_dim)
         self.pos_en = PositionalEncoding(embed_dim, dropout)
         self.dropout = nn.Dropout(dropout)
-        self.encoder = Encoder(embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads, dropout=dropout)
+
+        encoder_layer = nn.TransformerEncoderLayer(d_model=model_dim, nhead=num_heads, batch_first=True)
+        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
+
+        # self.encoder = Encoder(embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads, dropout=dropout)
         # output projection layer to map to vocab_size 
         self.out_proj = nn.Linear(embed_dim, vocab_size)
 
@@ -51,28 +55,24 @@ class EncoderBlock(nn.Module):
 
     def forward(self, input_embeddings, input_mask=None):
         # compute self attention
-        residual = input_embeddings  # (readability)
-        X = self.multi_head_attention(
-            input_embeddings, input_embeddings, input_embeddings, input_mask) + residual
-        X = self.layer_norm1(X)
-
+        X = input_embeddings
+        X = self.layer_norm1(self.multi_head_attention(X, X, X, input_mask) + X)
         # compute feed-forward
-        residual = X  # (readability)
-        X = self.feed_forward(X) + residual
-        X = self.layer_norm2(X)
+        X = self.layer_norm2(self.feed_forward(X) + X)
         return X
 
 
 class FeedForward(nn.Module):
-    def __init__(self, embed_dim, width_fac=4):
+    def __init__(self, embed_dim, width_fac=4, dropout=0.1):
         super(FeedForward, self).__init__()
 
         self.W_ff1 = nn.Linear(embed_dim, width_fac * embed_dim)
         self.W_ff2 = nn.Linear(embed_dim * width_fac, embed_dim)
         self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(dropout)
 
     def forward(self, X):
         # Simple Feedforward network that projects into a higher space (by width_fac)
         X = self.W_ff1(X)
-        X = self.relu(X)
+        X = self.dropout(self.relu(X))
         return self.W_ff2(X)

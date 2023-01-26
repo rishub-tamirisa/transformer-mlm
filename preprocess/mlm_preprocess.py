@@ -31,7 +31,7 @@ def mask_dataset_for_mlm(dataset, mlm_probability=0.15):
 Retrieves data from HuggingFace (not important)
 '''
 def get_dataset_example():
-    dataset = load_dataset("wikitext", "wikitext-2-raw-v1")
+    dataset = load_dataset("wikitext", "wikitext-103-v1")
     model_checkpoint = "bert-base-uncased"
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
     def tokenize_function(examples):

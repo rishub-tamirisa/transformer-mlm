@@ -11,13 +11,15 @@ class MultiHeadAttention(nn.Module):
         self.head_dim = model_dim // num_heads
 
         self.qkv_weights_list = nn.ModuleList()
+        # If MultiHeadAttention, QKV projections are split across 2nd dim -> embed_dim x model_dim -> embed_dim x (model_dim / num_heads)
         for _ in range(num_heads):
-            q_proj = nn.Linear(embed_dim, model_dim)
-            k_proj = nn.Linear(embed_dim, model_dim)
-            v_proj = nn.Linear(embed_dim, model_dim)
+            q_proj = nn.Linear(embed_dim, self.head_dim)
+            k_proj = nn.Linear(embed_dim, self.head_dim)
+            v_proj = nn.Linear(embed_dim, self.head_dim)
             self.qkv_weights_list.append(nn.ModuleList([q_proj, k_proj, v_proj]))
-
-        self.out_proj = nn.Linear(model_dim * num_heads, embed_dim)
+        
+        # Output Projection, project to embed_dim from model_dim (usually model_dim = embed_dim)
+        self.out_proj = nn.Linear(model_dim, embed_dim)
 
         self.dropout = nn.Dropout(dropout)
 
@@ -29,7 +31,7 @@ class MultiHeadAttention(nn.Module):
         if mask is not None:
             S.masked_fill_(mask == torch.tensor(False), float("-inf"))
         # Softmax into Probability / Score Distribution
-        S = F.softmax(S, dim=0)
+        S = F.softmax(S, dim=-1)
         # Apply weighted scores to value matrix
         return torch.matmul(S, value)
     
@@ -39,6 +41,21 @@ class MultiHeadAttention(nn.Module):
         out = torch.cat([self.attention(Q(query), K(key), V(value), mask) for Q, K ,V in self.qkv_weights_list], dim=-1)
         # Shape(out) -> (seq_len, (model_dim * num_heads))
         out = self.out_proj(out)
-        return out
+        return self.dropout(out)
 
 
+if __name__ == "__main__":
+    # Test MultiHeadAttention
+    torch.manual_seed(0)
+    embed_dim = 512
+    model_dim = 512
+    num_heads = 4
+    seq_len = 10
+    test = torch.rand((1, seq_len, embed_dim))
+    # mask = torch.rand((seq_len, seq_len)) > 0.5
+
+    mha = MultiHeadAttention(embed_dim, model_dim, num_heads)
+    mha_torch = nn.MultiheadAttention(embed_dim, num_heads)
+    out = mha(test, test, test)
+    out_torch = mha_torch(test, test, test)
+    assert out.shape == out_torch[0].shape
