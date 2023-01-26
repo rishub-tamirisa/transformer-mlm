@@ -37,6 +37,14 @@ class MultiHeadAttention(nn.Module):
     
 
     def forward(self, query, key, value, mask=None):
+        '''
+        Typically, the concatenation operation over a list is not used because rather than creating q_proj, k_proj, v_proj
+        with dim (embed_dim, self.head_dim), we create them as larger linear layers with dim (embed_dim, model_dim)
+        and instead reshape the output with reshape() or view() to (num_heads, seq_len, self.head_dim). This works because 
+        num_heads * self.head_dim = model_dim. This is more efficient than concatenating the output of the linear layers
+        because attention can be computed in parallel. Here, we use the concatenation operation to directly replicate the MultiHeadAttention
+        definition in Vaswani et al. (2017).
+        '''
         # QKV weight matrices -> (seq_len, embed_dim) x (embed_dim, model_dim) = (seq_len, model_dim)
         out = torch.cat([self.attention(Q(query), K(key), V(value), mask) for Q, K ,V in self.qkv_weights_list], dim=-1)
         # Shape(out) -> (seq_len, (model_dim * num_heads))
