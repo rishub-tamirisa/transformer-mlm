@@ -11,9 +11,11 @@ Same content as train.ipynb
 def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu')):
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
     model.train()
-
+    model.to(device)
     with tqdm(total=epochs) as pbar:
         for _ in range(epochs):
+            cur_batch = 0
+            total_batches = len(loader) 
             for batch in loader:
                 input_ids, labels = batch
                 input_ids = input_ids.to(device, dtype=torch.int64)
@@ -23,7 +25,9 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                 loss = criterion(output.view(-1, tokenizer.vocab_size), labels.view(-1))
                 loss.backward()
                 optimizer.step()
-                pbar.set_postfix("loss", loss.item())
+                cur_batch += 1
+                pbar.set_postfix(**{"batch: ": f"{cur_batch} / {total_batches}", "loss:": loss.item()})
+
 
 if __name__ == "__main__":
     
