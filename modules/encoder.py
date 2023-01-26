@@ -1,0 +1,78 @@
+import torch.nn as nn
+from .attention import MultiHeadAttention
+from .positional_encoding import PositionalEncoding
+
+class EncoderModel(nn.Module):
+    def __init__(self, vocab_size, embed_dim, model_dim, n_layers, num_heads, dropout=0.1):
+        super(EncoderModel, self).__init__()
+        # embeddings are a table where each row corresponds to an input_id is a vector of size embed_dim
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        self.pos_en = PositionalEncoding(embed_dim, dropout)
+        self.dropout = nn.Dropout(dropout)
+        self.encoder = Encoder(embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads, dropout=dropout)
+        # output projection layer to map to vocab_size 
+        self.out_proj = nn.Linear(embed_dim, vocab_size)
+
+    def forward(self, input_ids, input_mask=None):
+        # add positional encoding of iputs to the embeddings before sending to encoder
+        embedding = self.embedding(input_ids)
+        ''' embedding permutes are to make the embedding dimension the first dimension for positional encoding (just for compatability with PyTorch code)
+            This is still just embedding + positional encoding
+        '''
+        input_embedding = self.dropout(embedding + self.pos_en(embedding.permute(1, 0, 2)).permute(1, 0, 2))
+        X = self.encoder(input_embedding, input_mask)
+        return self.out_proj(X)
+        
+
+class Encoder(nn.Module):
+    def __init__(self, embed_dim, model_dim, n_layers, num_heads, dropout=0.1):
+        super(Encoder, self).__init__()
+        self.encoder_layers = [EncoderBlock(
+            embed_dim=embed_dim, model_dim=model_dim, num_heads=num_heads, dropout=dropout) for _ in range(n_layers)]
+
+    def forward(self, input_embedding, input_mask=None):
+        X = input_embedding
+        for layer in self.encoder_layers:
+            X = layer(X, input_mask)
+        return X
+
+
+class EncoderBlock(nn.Module):
+    def __init__(self, embed_dim, model_dim, num_heads, dropout=0.1):
+        super(EncoderBlock, self).__init__()
+
+        self.layer_norm1 = nn.LayerNorm(embed_dim)
+        self.multi_head_attention = MultiHeadAttention(embed_dim=embed_dim,
+                                                       model_dim=model_dim,
+                                                       num_heads=num_heads,
+                                                       dropout=dropout)
+        self.feed_forward = FeedForward(embed_dim=embed_dim)
+        self.layer_norm2 = nn.LayerNorm(embed_dim)
+
+    def forward(self, input_embeddings, input_mask=None):
+        # compute self attention
+        residual = input_embeddings  # (readability)
+        X = self.multi_head_attention(
+            input_embeddings, input_embeddings, input_embeddings, input_mask) + residual
+        X = self.layer_norm1(X)
+
+        # compute feed-forward
+        residual = X  # (readability)
+        X = self.feed_forward(X) + residual
+        X = self.layer_norm2(X)
+        return X
+
+
+class FeedForward(nn.Module):
+    def __init__(self, embed_dim, width_fac=4):
+        super(FeedForward, self).__init__()
+
+        self.W_ff1 = nn.Linear(embed_dim, width_fac * embed_dim)
+        self.W_ff2 = nn.Linear(embed_dim * width_fac, embed_dim)
+        self.relu = nn.ReLU()
+
+    def forward(self, X):
+        # Simple Feedforward network that projects into a higher space (by width_fac)
+        X = self.W_ff1(X)
+        X = self.relu(X)
+        return self.W_ff2(X)
