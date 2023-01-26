@@ -40,7 +40,8 @@ if __name__ == "__main__":
     dataset = TensorDataset( mlm_input_ids, mlm_labels )
     loader = DataLoader(dataset, batch_size = 32, shuffle=True)
 
-    train_mlm(model=encoder,
-              tokenizer=tokenizer,
+    train_mlm(epochs=4, 
+              tokenizer=tokenizer, 
+              model=encoder, 
               loader=loader, 
               optimizer=torch.optim.Adam(encoder.parameters(), lr=1e-4))
