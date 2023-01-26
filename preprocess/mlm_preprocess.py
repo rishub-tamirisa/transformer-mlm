@@ -22,7 +22,7 @@ def mask_dataset_for_mlm(dataset, tokenizer, mlm_probability=0.15):
     # representation towards the actual observed
     # word.
 
-    rand = torch.rand(input_ids.shape)
+    rand = torch.rand(input_ids.shape[0])
     # BERT-style masking:
     # create decision array with shape [input_ids.shape[0], 1] containing values 0, 1, 2 where 0 appears 80% of the time, 1 appears 10% of the time, and 2 appears 10% of the time
     decision_arr = torch.zeros(input_ids.shape[0], 1)
@@ -41,7 +41,7 @@ def mask_dataset_for_mlm(dataset, tokenizer, mlm_probability=0.15):
             labels[i][~mask] = -100
         elif decision_arr[i] == 1:
             # 10% of the time: Replace the word with a random word
-            random_words = torch.randint(len(tokenizer), input_ids[i][mask].shape, dtype=torch.long)
+            random_words = torch.randint(len(tokenizer), input_ids[i][mask].shape)
             input_ids[i][mask] = random_words
             labels[i][~mask] = -100
         else:
@@ -84,4 +84,4 @@ def get_dataset_example():
 
     lm_datasets = tokenized_datasets.map(group_texts, batched=True)
 
-    return torch.Tensor(lm_datasets['train']['input_ids']), tokenizer
+    return torch.LongTensor(lm_datasets['train']['input_ids']), tokenizer
