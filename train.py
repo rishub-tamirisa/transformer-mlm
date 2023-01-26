@@ -10,8 +10,8 @@ Same content as train.ipynb
 
 def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu')):
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
-    model.train()
     model.to(device)
+    model.train()
     with tqdm(total=epochs) as pbar:
         for _ in range(epochs):
             cur_batch = 0
