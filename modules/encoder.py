@@ -16,8 +16,8 @@ class EncoderModel(nn.Module):
     def forward(self, input_ids, input_mask=None):
         # add positional encoding of iputs to the embeddings before sending to encoder
         embedding = self.embedding(input_ids)
-        ''' embedding permutes are to make the embedding dimension the first dimension for positional encoding (just for compatability with PyTorch code)
-            This is still just embedding + positional encoding
+        ''' 
+        Embedding permutes are to make the embedding dimension the first dimension for positional encoding (just for compatability with PyTorch code in positional_encoding.py). This is still just embedding + positional encoding
         '''
         input_embedding = self.dropout(embedding + self.pos_en(embedding.permute(1, 0, 2)).permute(1, 0, 2))
         X = self.encoder(input_embedding, input_mask)
