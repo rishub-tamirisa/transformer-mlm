@@ -46,5 +46,8 @@ train_mlm(epochs=4,
           loader=loader, 
           optimizer=torch.optim.Adam(encoder.parameters(), lr=1e-4))
 ```
-
+#### Dependencies
+`transformers` : used for tokenizing input data <br>
+`datasets` : used for retrieving datasets <br>
+`torch` : used for model implementatio <br>
 
