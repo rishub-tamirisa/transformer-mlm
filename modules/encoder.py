@@ -3,6 +3,10 @@ from .attention import MultiHeadAttention
 from .positional_encoding import PositionalEncoding
 
 class EncoderModel(nn.Module):
+    '''
+    `EncoderModel` wraps the Encoder with the embedding input layer and output projection layer, for use in downstream tasks.
+    Importantly, positional encoding is added to the embedding before sending to the encoder.
+    '''
     def __init__(self, vocab_size, embed_dim, model_dim, n_layers, num_heads, dropout=0.1):
         super(EncoderModel, self).__init__()
         # embeddings are a table where each row corresponds to an input_id is a vector of size embed_dim
@@ -10,6 +14,7 @@ class EncoderModel(nn.Module):
         self.pos_en = PositionalEncoding(embed_dim, dropout)
         self.dropout = nn.Dropout(dropout)
 
+        # Uncomment these 2 lines to use PyTorch's TransformerEncoder
         # encoder_layer = nn.TransformerEncoderLayer(d_model=model_dim, nhead=num_heads, batch_first=True)
         # self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
 
@@ -42,8 +47,11 @@ class Encoder(nn.Module):
 
 
 class EncoderBlock(nn.Module):
+    '''
+    Encoder block layer as described in the paper.
+    '''
     def __init__(self, embed_dim, model_dim, num_heads, dropout=0.1):
-        super(EncoderBlock, self).__init__()
+        super(EncoderBlock, self).__init__()    
 
         self.layer_norm1 = nn.LayerNorm(embed_dim)
         self.multi_head_attention = MultiHeadAttention(embed_dim=embed_dim,
@@ -56,9 +64,9 @@ class EncoderBlock(nn.Module):
     def forward(self, input_embeddings, input_mask=None):
         # compute self attention
         X = input_embeddings
-        X = self.layer_norm1(self.multi_head_attention(X, X, X, input_mask) + X)
+        X = self.layer_norm1(self.multi_head_attention(X, X, X, input_mask) + X) # add residual connection + layer_norm
         # compute feed-forward
-        X = self.layer_norm2(self.feed_forward(X) + X)
+        X = self.layer_norm2(self.feed_forward(X) + X) # add residual connection + layer_norm
         return X
 
 
@@ -72,7 +80,7 @@ class FeedForward(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, X):
-        # Simple Feedforward network that projects into a higher space (by width_fac)
+        # Simple Feedforward network that projects into a higher space (by width_fac) and back to embed_dim
         X = self.W_ff1(X)
         X = self.dropout(self.relu(X))
         return self.W_ff2(X)

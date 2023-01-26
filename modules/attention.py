@@ -41,7 +41,7 @@ class MultiHeadAttention(nn.Module):
         Typically, the concatenation operation over a list is not used because rather than creating q_proj, k_proj, v_proj
         with dim (embed_dim, self.head_dim), we create them as larger linear layers with dim (embed_dim, model_dim)
         and instead reshape the output with reshape() or view() to (num_heads, seq_len, self.head_dim). This works because 
-        num_heads * self.head_dim = model_dim. This is more efficient than concatenating the output of the linear layers
+        num_heads * self.head_dim = model_dim. This is more efficient than concatenating the output of the QKV linear layers
         because attention can be computed in parallel. Here, we use the concatenation operation to directly replicate the MultiHeadAttention
         definition in Vaswani et al. (2017).
         '''

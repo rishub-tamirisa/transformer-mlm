@@ -20,11 +20,12 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                 input_ids, labels = batch
                 input_ids = input_ids.to(device, dtype=torch.int64)
                 labels = labels.to(device, dtype=torch.int64)
-                optimizer.zero_grad()
                 output = model(input_ids)
                 loss = criterion(output.view(-1, tokenizer.vocab_size), labels.view(-1))
                 loss.backward()
                 optimizer.step()
+                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+                optimizer.zero_grad()
                 cur_batch += 1
                 pbar.set_postfix(**{"batch: ": f"{cur_batch} / {total_batches}", "loss:": loss.item()})
         checkpoint = {'vocab_size': tokenizer.vocab_size,
