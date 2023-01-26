@@ -1,10 +1,6 @@
 # Masked Language Modeling with Transformer Encoders
 
-### What is this repository?
-
-With the recent boost in popularity of LLMs among the broader computing / research community, I decided to create an beginner/intermediate friendly introduction to Language Modeling with PyTorch. Since there is an influx of people who are new to studying this topic during a time in which the NLP field is growing at a high rate, it may be difficult for newcomers to find to identify the correct resources for following the progression of LLM research up to this point.
-
-The code in this repository is the kind of resource I wish I had when I started learning about LLMs. Especially for newcomers, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
+For newcomers, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
 
 **Disclaimer**: The code in this repository is **not** intended for production use, although some elements/computation may serve as an inspiration. The implementation emphasizes readability w.r.t the original Transformer Paper, ["Attention is All You Need" (Vaswani, et al. 2017)](https://arxiv.org/abs/1706.03762), rather than efficiency. Primarily, this code is meant to demonstrate Masked Language Modeling for encoders, whereas commonly-used implementations in PyTorch or HuggingFace contain substantially more configurable parameters for API flexibility for use in other downstream tasks.
 
