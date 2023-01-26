@@ -10,10 +10,10 @@ class EncoderModel(nn.Module):
         self.pos_en = PositionalEncoding(embed_dim, dropout)
         self.dropout = nn.Dropout(dropout)
 
-        encoder_layer = nn.TransformerEncoderLayer(d_model=model_dim, nhead=num_heads, batch_first=True)
-        self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
+        # encoder_layer = nn.TransformerEncoderLayer(d_model=model_dim, nhead=num_heads, batch_first=True)
+        # self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=n_layers)
 
-        # self.encoder = Encoder(embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads, dropout=dropout)
+        self.encoder = Encoder(embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads, dropout=dropout)
         # output projection layer to map to vocab_size 
         self.out_proj = nn.Linear(embed_dim, vocab_size)
 
