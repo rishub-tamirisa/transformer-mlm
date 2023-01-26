@@ -1,4 +1,4 @@
-# Masked Language Modeling with Transformer Encoders
+# [WIP] Masked Language Modeling with Transformer Encoders
 
 For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
 
