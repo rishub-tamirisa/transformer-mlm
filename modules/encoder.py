@@ -27,8 +27,8 @@ class EncoderModel(nn.Module):
 class Encoder(nn.Module):
     def __init__(self, embed_dim, model_dim, n_layers, num_heads, dropout=0.1):
         super(Encoder, self).__init__()
-        self.encoder_layers = [EncoderBlock(
-            embed_dim=embed_dim, model_dim=model_dim, num_heads=num_heads, dropout=dropout) for _ in range(n_layers)]
+        self.encoder_layers = nn.ModuleList([EncoderBlock(
+            embed_dim=embed_dim, model_dim=model_dim, num_heads=num_heads, dropout=dropout) for _ in range(n_layers)])
 
     def forward(self, input_embedding, input_mask=None):
         X = input_embedding

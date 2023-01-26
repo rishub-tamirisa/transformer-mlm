@@ -10,7 +10,7 @@ class MultiHeadAttention(nn.Module):
         assert model_dim % num_heads == 0
         self.head_dim = model_dim // num_heads
 
-        self.qkv_weights_list = []
+        self.qkv_weights_list = nn.ModuleList()
         for n in range(num_heads):
             q_proj = nn.Linear(embed_dim, model_dim)
             k_proj = nn.Linear(embed_dim, model_dim)
