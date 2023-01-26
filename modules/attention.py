@@ -15,7 +15,7 @@ class MultiHeadAttention(nn.Module):
             q_proj = nn.Linear(embed_dim, model_dim)
             k_proj = nn.Linear(embed_dim, model_dim)
             v_proj = nn.Linear(embed_dim, model_dim)
-            self.qkv_weights_list.append((q_proj, k_proj, v_proj))
+            self.qkv_weights_list.append(nn.ModuleList([q_proj, k_proj, v_proj]))
 
         self.out_proj = nn.Linear(model_dim * num_heads, embed_dim)
 
