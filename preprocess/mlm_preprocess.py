@@ -11,42 +11,37 @@ def mask_dataset_for_mlm(dataset, tokenizer, mlm_probability=0.15):
     input_ids = dataset.clone()
     labels = dataset.clone()
 
-    # 80% of the time: Replace the word with the
-    # [MASK] token, e.g., my dog is hairy →
-    # my dog is [MASK]
-    # • 10% of the time: Replace the word with a
-    # random word, e.g., my dog is hairy → my
-    # dog is apple
-    # • 10% of the time: Keep the word unchanged, e.g., my dog is hairy → my dog
-    # is hairy. The purpose of this is to bias the
-    # representation towards the actual observed
-    # word.
+    '''
+    80% of the time: Replace the word with the
+    [MASK] token, e.g., my dog is hairy →
+    my dog is [MASK]
+    • 10% of the time: Replace the word with a
+    random word, e.g., my dog is hairy → my
+    dog is apple
+    • 10% of the time: Keep the word unchanged, e.g., my dog is hairy → my dog
+    is hairy. The purpose of this is to bias the
+    representation towards the actual observed
+    word.
 
-    rand = torch.rand(input_ids.shape[0])
-    # BERT-style masking:
-    # create decision array with shape [input_ids.shape[0], 1] containing values 0, 1, 2 where 0 appears 80% of the time, 1 appears 10% of the time, and 2 appears 10% of the time
-    decision_arr = torch.zeros(input_ids.shape[0], 1)
-    decision_arr[rand < 0.8] = 0
-    decision_arr[(rand >= 0.8) & (rand < 0.9)] = 1
-    decision_arr[rand >= 0.9] = 2
-
-
+    BERT-style masking: (currently decides masking at sequence level but should be at token level)
+    '''
     for i in range(input_ids.shape[0]):
         mask = torch.rand(input_ids[i].shape) < mlm_probability
         mask = mask * (input_ids[i] != 101) * (input_ids[i] != 102) * (input_ids[i] != 0)
-        # Follow the 80-10-10 rule
-        if decision_arr[i] == 0:
-            # 80% of the time: Replace the word with the [MASK] token
-            input_ids[i][mask] = tokenizer.mask_token_id
-            labels[i][~mask] = -100
-        elif decision_arr[i] == 1:
-            # 10% of the time: Replace the word with a random word
-            random_words = torch.randint(len(tokenizer), input_ids[i][mask].shape)
-            input_ids[i][mask] = random_words
-            labels[i][~mask] = -100
-        else:
-            # 10% of the time: Keep the word unchanged
-            pass
+
+        decision = torch.rand(input_ids[i].shape)
+        for j in range (mask.shape[0]):
+            if mask[j]:
+                if decision[j] < 0.8:
+                    input_ids[i][j] = tokenizer.mask_token_id
+                elif decision[j] < 0.9:
+                    input_ids[i][j] = torch.randint(0, tokenizer.vocab_size, (1,))[0]
+                else:
+                    pass
+            else:
+                input_ids[i][j] = input_ids[i][j]
+                labels[i][j] = -100
+
     return input_ids, labels
 
 '''
