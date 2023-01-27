@@ -12,7 +12,7 @@ With that being said, exact attention is computed in this implementation. Users 
 
 - [modules](https://github.com/rishub-tamirisa/language-model-impl/tree/main/modules) contains the implementation of important Transformer encoder submodules, i.e. `MultiHeadAttention`.
 
-- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains functions for preparing masked language model training. For a full understanding of the implementation, it would be important to read through [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/language-model-impl/blob/da81c342021b53e8589bc60945bc40bc326e3b7d/preprocess/mlm_preprocess.py#L8).
+- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains functions for preparing masked language model training. For a full understanding of the implementation, it would be important to read through [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/transformer-mlm/blob/main/preprocess/mlm_preprocess.py).
 
 ### Reproducibility
 
