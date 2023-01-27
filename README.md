@@ -18,6 +18,8 @@ With that being said, exact attention is computed in this implementation. Users 
 
 `train.ipynb` provides a complete notebook for loading a dataset and training the model.
 
+Completed training runs can be viewed at the [wandb project](https://wandb.ai/rishubtamirisa/encoder-mlm?workspace=user-rishubtamirisa)
+
 #### Example
 
 To run the training in a separate script, the following format can be used.
