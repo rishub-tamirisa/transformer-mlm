@@ -1,0 +1,1278 @@
+2023-01-26 23:47:58,390 INFO    StreamThr :40935 [internal.py:wandb_internal():87] W&B internal server running at pid: 40935, started at: 2023-01-26 23:47:58.389970
+2023-01-26 23:47:58,391 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status
+2023-01-26 23:47:58,392 INFO    WriterThread:40935 [datastore.py:open_for_write():85] open: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/run-0dg5y2us.wandb
+2023-01-26 23:47:58,394 DEBUG   SenderThread:40935 [sender.py:send():334] send: header
+2023-01-26 23:47:58,416 DEBUG   SenderThread:40935 [sender.py:send():334] send: run
+2023-01-26 23:47:58,636 INFO    SenderThread:40935 [dir_watcher.py:__init__():216] watching files in: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files
+2023-01-26 23:47:58,636 INFO    SenderThread:40935 [sender.py:_start_run_threads():1065] run started: 0dg5y2us with start time 1674798478.389445
+2023-01-26 23:47:58,636 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:47:58,636 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:47:58,638 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: check_version
+2023-01-26 23:47:58,638 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: check_version
+2023-01-26 23:47:58,713 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: run_start
+2023-01-26 23:47:58,723 DEBUG   HandlerThread:40935 [system_info.py:__init__():31] System info init
+2023-01-26 23:47:58,723 DEBUG   HandlerThread:40935 [system_info.py:__init__():46] System info init done
+2023-01-26 23:47:58,723 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:47:58,723 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:47:58,724 INFO    HandlerThread:40935 [system_monitor.py:probe():172] Collecting system info
+2023-01-26 23:47:58,724 DEBUG   HandlerThread:40935 [system_info.py:probe():195] Probing system
+2023-01-26 23:47:58,724 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:47:58,724 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started disk
+2023-01-26 23:47:58,726 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started gpuapple
+2023-01-26 23:47:58,726 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started memory
+2023-01-26 23:47:58,727 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started network
+2023-01-26 23:47:58,731 DEBUG   HandlerThread:40935 [system_info.py:_probe_git():180] Probing git
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_info.py:_probe_git():188] Probing git done
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_info.py:probe():241] Probing system done
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_monitor.py:probe():181] {'os': 'macOS-13.0.1-arm64-arm-64bit', 'python': '3.10.8', 'heartbeatAt': '2023-01-27T05:47:58.724254', 'startedAt': '2023-01-27T05:47:58.381700', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': '<python with no main file>', 'git': {'remote': 'https://github.com/rishub-tamirisa/language-model-impl.git', 'commit': 'b19fb5f9402e1791fb246cdd58b24db5047cefbf'}, 'email': 'rishubt2@illinois.edu', 'root': '/Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl', 'host': 'Rishubs-MacBook-Pro.local', 'username': 'rishubtamirisa', 'executable': '/Users/rishubtamirisa/miniforge3/envs/LM-impl/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'total': 228.27386474609375, 'used': 215.6597900390625}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 8.0}}
+2023-01-26 23:47:58,752 INFO    HandlerThread:40935 [system_monitor.py:probe():182] Finished collecting system info
+2023-01-26 23:47:58,752 INFO    HandlerThread:40935 [system_monitor.py:probe():185] Publishing system info
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_info.py:_save_pip():67] Saving pip packages done
+2023-01-26 23:47:58,752 DEBUG   HandlerThread:40935 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-01-26 23:47:59,642 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/requirements.txt
+2023-01-26 23:47:59,642 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:47:59,642 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/conda-environment.yaml
+2023-01-26 23:48:00,088 DEBUG   HandlerThread:40935 [system_info.py:_save_conda():86] Saving conda packages done
+2023-01-26 23:48:00,089 INFO    HandlerThread:40935 [system_monitor.py:probe():187] Finished publishing system info
+2023-01-26 23:48:00,091 DEBUG   SenderThread:40935 [sender.py:send():334] send: files
+2023-01-26 23:48:00,091 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2023-01-26 23:48:00,098 DEBUG   SenderThread:40935 [sender.py:send():334] send: telemetry
+2023-01-26 23:48:00,099 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: stop_status
+2023-01-26 23:48:00,100 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: stop_status
+2023-01-26 23:48:00,644 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/conda-environment.yaml
+2023-01-26 23:48:00,644 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-metadata.json
+2023-01-26 23:48:00,644 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:01,611 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:02,649 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:03,809 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:05,231 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:05,233 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:05,237 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:05,237 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:05,667 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:06,671 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:08,829 INFO    Thread-16 :40935 [upload_job.py:push():143] Uploaded file /var/folders/1j/3r04hy696fxg4lmp57wrl5m00000gn/T/tmpljd_iubwwandb/x7vj3pqm-wandb-metadata.json
+2023-01-26 23:48:08,888 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:09,709 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:09,713 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:09,718 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:09,779 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:10,693 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:10,694 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:14,691 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:14,710 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:14,714 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:14,716 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:14,719 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:14,813 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:14,814 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:15,130 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:15,131 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:18,833 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:18,956 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:18,961 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:18,962 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:19,063 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:19,838 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:20,075 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:20,179 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:23,738 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:23,753 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:23,754 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:23,844 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:23,921 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:24,913 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:25,204 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:25,855 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:28,203 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:28,209 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:28,210 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:28,211 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:28,940 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:28,942 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:30,224 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:31,035 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:31,958 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/config.yaml
+2023-01-26 23:48:32,452 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:32,454 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:32,455 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:32,458 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:32,989 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:32,993 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:35,251 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:36,328 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:36,671 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:36,674 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:36,674 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:36,698 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:36,999 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:36,999 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:40,277 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:41,028 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:41,089 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:41,096 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:41,096 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:41,098 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:42,029 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:42,105 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:45,048 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:45,309 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:45,432 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:45,435 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:45,437 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:45,470 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:46,065 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:47,506 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:50,222 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:50,257 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:50,284 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:50,367 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:50,418 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:51,079 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:51,080 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:52,973 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:54,252 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:54,261 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:54,262 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:54,263 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:55,098 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:55,098 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:48:55,407 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:48:58,255 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:48:58,257 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:48:58,258 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:48:58,258 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:48:58,261 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:48:58,729 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:48:58,738 DEBUG   SenderThread:40935 [sender.py:send():334] send: telemetry
+2023-01-26 23:48:58,739 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:48:59,119 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:48:59,119 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:00,461 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:02,606 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:02,609 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:02,610 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:02,613 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:03,142 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:03,143 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:03,625 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:04,146 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/config.yaml
+2023-01-26 23:49:05,478 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:06,332 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:06,335 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:06,338 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:06,345 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:07,153 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:07,154 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:08,792 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:10,254 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:10,281 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:10,290 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:10,296 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:10,520 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:11,179 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:11,179 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:13,999 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:14,302 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:14,302 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:14,303 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:14,316 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:15,195 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:15,196 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:15,538 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:18,334 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:18,359 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:18,364 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:18,408 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:19,215 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:19,216 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:19,456 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:20,564 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:22,459 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:22,501 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:22,501 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:22,509 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:23,233 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:23,233 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:24,520 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:25,584 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:26,921 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:26,923 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:26,924 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:26,928 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:27,274 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:27,275 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:28,738 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:49:29,741 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:30,621 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:31,293 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:31,301 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:31,303 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:31,304 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:31,310 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:32,297 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:34,924 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:35,307 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:35,446 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:35,447 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:35,453 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:35,454 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:35,643 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:36,313 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:39,404 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:39,970 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:39,973 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:39,978 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:39,996 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:40,077 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:40,355 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:40,680 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:43,871 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:43,918 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:43,929 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:43,940 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:44,388 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:45,387 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:45,692 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:45,959 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:48,093 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:48,107 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:48,115 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:48,119 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:48,428 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:49,435 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:50,711 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:51,076 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:52,486 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:52,492 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:52,493 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:52,521 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:53,452 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:53,453 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:55,743 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:49:56,251 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:49:57,467 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:49:57,734 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:49:57,737 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:49:57,743 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:49:57,746 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:49:58,485 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:49:58,741 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:50:00,758 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:02,113 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:02,553 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:02,555 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:02,555 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:02,563 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:03,505 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:03,505 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:05,773 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:06,912 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:06,914 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:06,914 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:06,915 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:07,541 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:07,548 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:07,921 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:10,791 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:10,928 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:10,930 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:10,930 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:10,932 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:11,559 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:11,566 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:12,947 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:15,221 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:15,224 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:15,224 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:15,225 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:15,572 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:15,573 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:15,810 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:18,825 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:19,259 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:19,261 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:19,261 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:19,263 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:19,593 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:19,595 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:20,837 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:23,423 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:23,435 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:23,435 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:23,438 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:23,632 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:23,638 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:24,450 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:25,851 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:27,648 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:27,742 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:27,749 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:27,751 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:27,752 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:28,651 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:28,747 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:50:29,749 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:30,862 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:31,660 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:31,894 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:31,922 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:31,930 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:31,935 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:32,663 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:35,497 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:35,676 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:35,781 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:35,785 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:35,788 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:35,795 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:35,896 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:36,680 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:39,838 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:39,850 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:39,852 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:40,009 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:40,702 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:40,914 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:41,075 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:41,708 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:43,717 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:43,757 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:43,760 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:43,767 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:43,769 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:44,719 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:45,954 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:46,347 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:47,531 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:47,590 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:47,606 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:47,625 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:47,793 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:47,795 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:50,973 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:51,082 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:51,082 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:51,082 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:51,083 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:51,809 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:51,810 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:52,087 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:55,175 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:55,284 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:55,293 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:55,326 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:55,830 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:55,831 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:50:55,987 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:50:57,343 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:50:58,749 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:50:59,645 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:50:59,672 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:50:59,675 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:50:59,742 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:50:59,881 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:50:59,881 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:01,015 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:02,512 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:03,743 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:03,747 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:03,747 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:03,749 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:03,979 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:03,982 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:06,030 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:06,987 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:07,857 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:07,859 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:07,859 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:07,859 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:07,865 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:08,064 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:11,072 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:11,074 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:12,039 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:12,040 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:12,040 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:12,046 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:12,076 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:13,058 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:15,090 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:16,129 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:16,936 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:16,951 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:16,972 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:16,981 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:17,141 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:19,000 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:20,829 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:20,838 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:20,839 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:20,843 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:21,128 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:21,163 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:21,165 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:24,214 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:24,493 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:24,494 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:24,496 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:24,507 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:25,185 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:25,185 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:26,144 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:28,335 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:28,348 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:28,352 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:28,354 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:28,764 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:51:29,205 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:29,206 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:29,772 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:31,161 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:32,256 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:32,272 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:32,274 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:32,284 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:33,224 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:33,224 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:35,770 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:36,104 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:36,105 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:36,105 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:36,144 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:36,182 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:36,344 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:37,347 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:40,133 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:40,214 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:40,227 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:40,248 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:40,362 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:41,198 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:41,349 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:41,367 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:44,113 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:44,118 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:44,118 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:44,124 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:44,383 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:45,389 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:46,225 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:46,763 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:48,302 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:48,326 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:48,328 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:48,371 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:48,432 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:49,443 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:51,237 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:52,002 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:52,449 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:52,450 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:52,453 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:52,459 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:52,476 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:53,478 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:56,260 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:51:56,563 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:51:56,564 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:51:56,572 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:51:56,577 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:51:57,499 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:51:57,500 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:51:57,599 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:51:58,766 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:52:00,606 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:00,702 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:00,705 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:00,709 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:01,287 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:01,526 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:01,527 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:02,717 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:04,592 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:04,602 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:04,608 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:04,612 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:05,547 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:05,548 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:06,308 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:08,055 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:08,382 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:08,383 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:08,383 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:08,384 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:08,566 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:09,563 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:11,337 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:11,573 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:12,486 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:12,489 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:12,490 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:12,491 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:12,577 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:13,500 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:16,334 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:16,395 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:16,532 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:16,537 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:16,557 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:16,618 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:17,616 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:18,573 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:20,615 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:20,632 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:20,638 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:20,658 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:20,843 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:21,401 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:21,706 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:24,403 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:24,661 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:24,662 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:24,663 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:24,676 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:24,720 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:25,722 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:26,415 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:28,450 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:28,468 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:28,476 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:28,479 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:28,739 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:28,773 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:52:29,739 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:29,779 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:31,437 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:31,745 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:32,241 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:32,254 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:32,256 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:32,260 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:32,749 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:34,815 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:35,759 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:36,200 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:36,201 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:36,201 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:36,201 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:36,456 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:36,767 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:40,362 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:41,028 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:41,039 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:41,041 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:41,050 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:41,491 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:41,788 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:41,788 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:45,081 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:45,119 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:45,140 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:45,150 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:45,807 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:45,808 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:46,173 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:46,501 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:49,169 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:49,191 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:49,208 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:49,214 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:49,846 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:49,857 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:51,231 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:51,527 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:53,417 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:53,459 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:53,480 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:53,493 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:53,878 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:53,883 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:56,546 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:52:56,920 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:52:57,165 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:52:57,168 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:52:57,168 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:52:57,174 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:52:57,888 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:52:57,889 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:52:58,775 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:53:00,945 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:01,028 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:01,040 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:01,108 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:01,568 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:01,912 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:01,912 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:02,131 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:04,664 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:04,666 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:04,667 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:04,673 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:04,924 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:05,929 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:06,587 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:07,940 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:08,132 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:08,420 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:08,422 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:08,425 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:08,436 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:08,944 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:11,627 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:11,960 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:12,206 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:12,207 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:12,208 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:12,215 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:12,966 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:13,232 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:15,979 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:16,274 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:16,300 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:16,302 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:16,302 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:16,653 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:17,003 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:18,312 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:21,241 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:21,249 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:21,264 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:21,268 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:21,691 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:22,019 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:22,019 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:24,099 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:25,394 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:25,397 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:25,398 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:25,450 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:26,047 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:26,057 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:26,708 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:28,778 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:53:29,363 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:29,364 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:29,367 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:29,369 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:29,376 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:30,061 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:30,062 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:31,730 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:34,083 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:34,382 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:34,386 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:34,399 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:34,412 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:34,420 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:35,090 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:36,762 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:38,103 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:38,121 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:38,122 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:38,127 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:38,128 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:39,108 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:40,145 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:41,785 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:42,119 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:42,339 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:42,340 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:42,341 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:42,342 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:43,124 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:46,136 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:46,142 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:46,337 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:46,338 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:46,338 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:46,345 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:46,817 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:47,140 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:50,155 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:50,324 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:50,325 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:50,327 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:50,330 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:51,158 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:51,341 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:51,838 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:54,114 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:54,170 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:54,173 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:54,187 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:54,190 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:53:54,191 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:56,861 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:53:57,122 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:53:58,208 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:53:58,492 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:53:58,493 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:53:58,495 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:53:58,496 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:53:58,780 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:53:59,214 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:01,875 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:02,469 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:02,711 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:02,712 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:02,712 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:02,713 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:03,250 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:04,251 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:06,893 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:06,920 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:06,921 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:06,921 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:06,922 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:07,265 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:07,928 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:08,266 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:11,312 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:11,320 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:11,322 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:11,326 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:11,937 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:12,289 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:12,289 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:13,341 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:15,230 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:15,258 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:15,263 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:15,264 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:15,310 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:16,310 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:16,957 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:18,712 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:19,036 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:19,040 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:19,047 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:19,050 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:19,325 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:20,326 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:21,983 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:22,335 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:22,852 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:22,862 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:22,865 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:22,877 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:23,336 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:23,889 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:26,354 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:26,817 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:26,828 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:26,830 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:26,835 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:27,039 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:27,357 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:28,781 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:54:29,372 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:30,373 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:30,641 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:30,653 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:30,655 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:30,657 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:31,402 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:32,052 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:34,405 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:34,521 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:34,732 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:34,736 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:34,737 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:34,745 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:35,411 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:37,076 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:38,424 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:38,624 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:38,629 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:38,629 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:38,636 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:39,428 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:39,641 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:42,099 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:42,423 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:42,432 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:42,434 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:42,437 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:42,442 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:42,442 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:44,798 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:45,954 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:45,971 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:45,977 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:45,985 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:46,460 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:46,461 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:47,160 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:49,940 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:49,944 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:49,963 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:49,966 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:49,971 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:50,478 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:50,479 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:52,189 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:53,892 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:53,919 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:53,921 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:53,925 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:54,518 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:54,519 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:55,939 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:54:57,254 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:54:57,798 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:54:57,811 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:54:57,819 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:54:57,821 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:54:58,551 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:54:58,559 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:54:58,784 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:55:01,695 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:01,889 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:01,900 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:01,900 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:01,902 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:02,279 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:02,568 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:02,568 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:05,651 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:05,662 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:05,668 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:05,681 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:06,589 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:06,590 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:07,296 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:07,697 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:09,614 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:09,628 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:09,631 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:09,632 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:10,607 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:10,608 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:12,320 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:13,362 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:13,676 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:13,677 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:13,677 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:13,684 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:14,629 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:14,629 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:17,345 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:17,940 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:17,941 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:17,941 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:17,946 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:18,645 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:18,646 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:18,956 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:21,872 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:21,901 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:21,909 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:21,988 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:22,369 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:22,671 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:22,677 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:24,060 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:25,961 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:25,990 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:25,991 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:25,992 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:26,693 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:26,694 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:27,388 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:28,786 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:55:30,013 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:30,211 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:30,212 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:30,213 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:30,213 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:30,714 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:30,716 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:32,466 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:32,467 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:34,230 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:34,250 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:34,251 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:34,253 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:34,738 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:34,740 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:35,269 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:37,487 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:38,129 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:38,160 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:38,174 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:38,182 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:38,761 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:38,762 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:41,104 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:42,449 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:42,450 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:42,450 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:42,452 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:42,507 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:42,780 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:42,785 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:46,254 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:46,622 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:46,624 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:46,625 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:46,626 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:46,825 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:46,825 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:47,522 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:50,841 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:51,111 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:51,113 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:51,113 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:51,114 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:51,847 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:52,124 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:52,554 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:54,860 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:55:55,172 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:55,213 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:55,218 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:55,222 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:55,888 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:55:57,250 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:55:57,567 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:55:58,802 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:55:59,650 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:55:59,681 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:55:59,682 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:55:59,725 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:55:59,930 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:00,927 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:02,587 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:02,756 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:04,128 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:04,143 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:04,147 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:04,150 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:04,946 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:04,946 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:07,615 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:07,887 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:08,208 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:08,208 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:08,209 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:08,212 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:08,961 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:08,962 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:12,281 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:12,284 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:12,284 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:12,289 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:12,637 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:12,980 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:12,980 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:13,309 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:16,094 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:16,108 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:16,112 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:16,116 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:17,001 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:17,002 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:17,664 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:18,628 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:19,922 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:19,936 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:19,939 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:19,955 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:20,033 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:21,023 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:22,675 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:23,718 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:23,719 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:23,736 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:23,739 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:23,743 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:24,035 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:25,040 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:27,680 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:27,720 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:27,724 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:27,730 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:27,737 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:28,056 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:28,774 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:28,801 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:29,060 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:31,956 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: partial_history
+2023-01-26 23:56:31,963 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:56:31,964 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:56:32,083 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:56:32,167 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:56:32,741 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:33,167 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:34,172 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:36,114 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: pause
+2023-01-26 23:56:36,115 INFO    HandlerThread:40935 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-01-26 23:56:36,115 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:56:36,129 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:56:36,130 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:56:36,130 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:56:36,131 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined disk
+2023-01-26 23:56:36,131 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined gpuapple
+2023-01-26 23:56:36,131 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined memory
+2023-01-26 23:56:36,131 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined network
+2023-01-26 23:56:36,132 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:36,200 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: resume
+2023-01-26 23:56:36,200 INFO    HandlerThread:40935 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-01-26 23:56:36,200 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:56:36,201 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:56:36,201 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:56:36,201 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started disk
+2023-01-26 23:56:36,202 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started gpuapple
+2023-01-26 23:56:36,202 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started memory
+2023-01-26 23:56:36,204 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started network
+2023-01-26 23:56:36,205 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: pause
+2023-01-26 23:56:36,205 INFO    HandlerThread:40935 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-01-26 23:56:36,205 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:56:36,207 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:56:36,207 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:56:36,207 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:56:36,208 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:56:36,208 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined disk
+2023-01-26 23:56:36,645 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined gpuapple
+2023-01-26 23:56:36,645 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined memory
+2023-01-26 23:56:36,645 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined network
+2023-01-26 23:56:36,645 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: resume
+2023-01-26 23:56:36,645 INFO    HandlerThread:40935 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-01-26 23:56:36,645 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:56:36,645 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:56:36,645 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: pause
+2023-01-26 23:56:36,646 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:36,646 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:56:36,646 INFO    HandlerThread:40935 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-01-26 23:56:36,646 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:56:36,646 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started disk
+2023-01-26 23:56:36,647 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:56:36,648 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:56:36,648 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined disk
+2023-01-26 23:56:36,648 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: resume
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:56:36,648 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:56:36,648 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: pause
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-01-26 23:56:36,648 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:56:36,648 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:56:36,650 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:56:36,650 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:56:36,650 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:56:36,650 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:56:36,650 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: resume
+2023-01-26 23:56:36,650 INFO    HandlerThread:40935 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-01-26 23:56:36,650 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:56:36,650 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:56:36,650 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: pause
+2023-01-26 23:56:36,650 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:56:36,650 INFO    HandlerThread:40935 [handler.py:handle_request_pause():717] stopping system metrics thread or process
+2023-01-26 23:56:36,650 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:56:36,650 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started disk
+2023-01-26 23:56:36,651 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:56:36,651 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:56:36,651 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:56:36,651 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:56:36,651 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined disk
+2023-01-26 23:56:36,652 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:36,652 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:36,652 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:56:37,190 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:37,835 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:39,203 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:56:39,665 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:42,852 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:44,680 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:47,871 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:49,693 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:52,893 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:54,713 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:56:57,907 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:56:59,733 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:02,927 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:04,743 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:07,938 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:09,761 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:12,957 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:14,780 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:17,982 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:19,798 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:23,001 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:24,815 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:28,013 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:29,827 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:33,030 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:34,841 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:38,043 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:39,859 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:43,055 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:44,872 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:48,071 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:49,887 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:53,094 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:54,911 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:57:58,121 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:57:59,929 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:03,145 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:04,955 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:08,164 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:09,974 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:13,185 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:14,996 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:18,211 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:20,008 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:23,235 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:25,028 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:28,255 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:30,043 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:33,275 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:35,059 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:38,294 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:40,079 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:43,321 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: keepalive
+2023-01-26 23:58:45,096 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:46,581 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: resume
+2023-01-26 23:58:46,581 INFO    HandlerThread:40935 [handler.py:handle_request_resume():708] starting system metrics thread or process
+2023-01-26 23:58:46,582 INFO    HandlerThread:40935 [system_monitor.py:start():151] Starting system monitor
+2023-01-26 23:58:46,582 INFO    SystemMonitor:40935 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-01-26 23:58:46,583 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started cpu
+2023-01-26 23:58:46,585 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started disk
+2023-01-26 23:58:46,592 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started gpuapple
+2023-01-26 23:58:46,595 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started memory
+2023-01-26 23:58:46,598 INFO    SystemMonitor:40935 [interfaces.py:start():168] Started network
+2023-01-26 23:58:46,623 DEBUG   SenderThread:40935 [sender.py:send():334] send: telemetry
+2023-01-26 23:58:46,626 DEBUG   SenderThread:40935 [sender.py:send():334] send: exit
+2023-01-26 23:58:46,626 INFO    SenderThread:40935 [sender.py:send_exit():557] handling exit code: 0
+2023-01-26 23:58:46,635 INFO    SenderThread:40935 [sender.py:send_exit():559] handling runtime: 517
+2023-01-26 23:58:46,637 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:58:46,637 INFO    SenderThread:40935 [sender.py:send_exit():565] send defer
+2023-01-26 23:58:46,638 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:46,638 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 0
+2023-01-26 23:58:46,638 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:46,638 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 0
+2023-01-26 23:58:46,638 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 1
+2023-01-26 23:58:46,638 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:46,638 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 1
+2023-01-26 23:58:46,638 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:46,638 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 1
+2023-01-26 23:58:46,638 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 2
+2023-01-26 23:58:46,638 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:46,638 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 2
+2023-01-26 23:58:46,638 INFO    HandlerThread:40935 [system_monitor.py:finish():161] Stopping system monitor
+2023-01-26 23:58:46,647 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-01-26 23:58:46,647 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-01-26 23:58:46,648 DEBUG   SystemMonitor:40935 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-01-26 23:58:46,648 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined cpu
+2023-01-26 23:58:46,648 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined disk
+2023-01-26 23:58:46,773 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:58:47,055 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined gpuapple
+2023-01-26 23:58:47,055 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined memory
+2023-01-26 23:58:47,055 INFO    HandlerThread:40935 [interfaces.py:finish():175] Joined network
+2023-01-26 23:58:47,056 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,056 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 2
+2023-01-26 23:58:47,056 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 3
+2023-01-26 23:58:47,056 DEBUG   SenderThread:40935 [sender.py:send():334] send: stats
+2023-01-26 23:58:47,056 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:47,056 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 3
+2023-01-26 23:58:47,056 DEBUG   SenderThread:40935 [sender.py:send():334] send: history
+2023-01-26 23:58:47,056 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: summary_record
+2023-01-26 23:58:47,056 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:58:47,057 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 3
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 4
+2023-01-26 23:58:47,057 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:47,057 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 4
+2023-01-26 23:58:47,057 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 4
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 5
+2023-01-26 23:58:47,057 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:47,057 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 5
+2023-01-26 23:58:47,057 DEBUG   SenderThread:40935 [sender.py:send():334] send: summary
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-01-26 23:58:47,057 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 5
+2023-01-26 23:58:47,057 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 6
+2023-01-26 23:58:47,057 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:47,057 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 6
+2023-01-26 23:58:47,058 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,058 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 6
+2023-01-26 23:58:47,063 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: status_report
+2023-01-26 23:58:47,234 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 7
+2023-01-26 23:58:47,235 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:47,235 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 7
+2023-01-26 23:58:47,235 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:47,235 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 7
+2023-01-26 23:58:47,628 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: poll_exit
+2023-01-26 23:58:47,779 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:58:47,780 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/config.yaml
+2023-01-26 23:58:50,491 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 8
+2023-01-26 23:58:50,491 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: poll_exit
+2023-01-26 23:58:50,492 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:50,492 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 8
+2023-01-26 23:58:50,492 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:50,493 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 8
+2023-01-26 23:58:50,493 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 9
+2023-01-26 23:58:50,493 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:50,493 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 9
+2023-01-26 23:58:50,494 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:50,494 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 9
+2023-01-26 23:58:50,494 INFO    SenderThread:40935 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-01-26 23:58:50,790 INFO    Thread-13 :40935 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:58:50,791 INFO    SenderThread:40935 [dir_watcher.py:finish():392] scan: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files
+2023-01-26 23:58:50,791 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/requirements.txt requirements.txt
+2023-01-26 23:58:50,792 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log output.log
+2023-01-26 23:58:50,798 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/config.yaml config.yaml
+2023-01-26 23:58:50,801 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json wandb-summary.json
+2023-01-26 23:58:50,804 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/conda-environment.yaml conda-environment.yaml
+2023-01-26 23:58:50,807 INFO    SenderThread:40935 [dir_watcher.py:finish():406] scan save: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-metadata.json wandb-metadata.json
+2023-01-26 23:58:50,807 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 10
+2023-01-26 23:58:50,807 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:50,809 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 10
+2023-01-26 23:58:50,810 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:50,810 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 10
+2023-01-26 23:58:50,810 INFO    SenderThread:40935 [file_pusher.py:finish():160] shutting down file pusher
+2023-01-26 23:58:51,699 INFO    Thread-21 :40935 [upload_job.py:push():143] Uploaded file /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/conda-environment.yaml
+2023-01-26 23:58:51,702 INFO    Thread-18 :40935 [upload_job.py:push():143] Uploaded file /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/output.log
+2023-01-26 23:58:51,710 INFO    Thread-17 :40935 [upload_job.py:push():143] Uploaded file /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/requirements.txt
+2023-01-26 23:58:51,779 INFO    Thread-20 :40935 [upload_job.py:push():143] Uploaded file /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/wandb-summary.json
+2023-01-26 23:58:51,799 INFO    Thread-19 :40935 [upload_job.py:push():143] Uploaded file /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/files/config.yaml
+2023-01-26 23:58:52,003 INFO    Thread-12 (_thread_body):40935 [sender.py:transition_state():585] send defer: 11
+2023-01-26 23:58:52,004 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:52,004 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 11
+2023-01-26 23:58:52,004 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:52,004 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 11
+2023-01-26 23:58:52,004 INFO    SenderThread:40935 [file_pusher.py:join():165] waiting for file pusher
+2023-01-26 23:58:52,004 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 12
+2023-01-26 23:58:52,005 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:52,005 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 12
+2023-01-26 23:58:52,005 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:52,005 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 12
+2023-01-26 23:58:52,335 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 13
+2023-01-26 23:58:52,336 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:52,336 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 13
+2023-01-26 23:58:52,336 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:52,336 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 13
+2023-01-26 23:58:52,337 INFO    SenderThread:40935 [sender.py:transition_state():585] send defer: 14
+2023-01-26 23:58:52,338 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: defer
+2023-01-26 23:58:52,338 DEBUG   SenderThread:40935 [sender.py:send():334] send: final
+2023-01-26 23:58:52,339 INFO    HandlerThread:40935 [handler.py:handle_request_defer():170] handle defer: 14
+2023-01-26 23:58:52,339 DEBUG   SenderThread:40935 [sender.py:send():334] send: footer
+2023-01-26 23:58:52,339 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: defer
+2023-01-26 23:58:52,339 INFO    SenderThread:40935 [sender.py:send_request_defer():581] handle sender defer: 14
+2023-01-26 23:58:52,341 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: poll_exit
+2023-01-26 23:58:52,341 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: server_info
+2023-01-26 23:58:52,341 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: get_summary
+2023-01-26 23:58:52,341 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: poll_exit
+2023-01-26 23:58:52,342 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: sampled_history
+2023-01-26 23:58:52,342 DEBUG   SenderThread:40935 [sender.py:send_request():361] send_request: server_info
+2023-01-26 23:58:52,613 DEBUG   HandlerThread:40935 [handler.py:handle_request():144] handle_request: shutdown
+2023-01-26 23:58:52,613 INFO    HandlerThread:40935 [handler.py:finish():841] shutting down handler
+2023-01-26 23:58:53,347 INFO    WriterThread:40935 [datastore.py:close():299] close: /Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl/wandb/run-20230126_234758-0dg5y2us/run-0dg5y2us.wandb
+2023-01-26 23:58:53,617 INFO    SenderThread:40935 [sender.py:finish():1491] shutting down sender
+2023-01-26 23:58:53,617 INFO    SenderThread:40935 [file_pusher.py:finish():160] shutting down file pusher
+2023-01-26 23:58:53,617 INFO    SenderThread:40935 [file_pusher.py:join():165] waiting for file pusher
