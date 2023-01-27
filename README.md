@@ -1,6 +1,6 @@
 # BERT-Style Masked Language Modeling with Transformer Encoders
 
-The purpose of this repository is to provide a easily-readable implementation of a Transformer Encoder and demonstrate Masked Language Modeling as described in the BERT paper, all in PyTorch.
+The purpose of this repository is to provide a easily-readable / beginner-friendly implementation of a Transformer Encoder and demonstrate Masked Language Modeling as described in the BERT paper, all in PyTorch.
 
 For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing implementation intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
 
