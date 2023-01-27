@@ -1,0 +1,33 @@
+{
+    "os": "macOS-13.0.1-arm64-arm-64bit",
+    "python": "3.10.8",
+    "heartbeatAt": "2023-01-27T07:30:31.664956",
+    "startedAt": "2023-01-27T07:30:31.348851",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/rishub-tamirisa/language-model-impl.git",
+        "commit": "8b00a3dad4660754cf06a1db28ca8ac8acdc056c"
+    },
+    "email": "rishubt2@illinois.edu",
+    "root": "/Users/rishubtamirisa/UIUC/NNProjects/transformer/language-model-impl",
+    "host": "Rishubs-MacBook-Pro.local",
+    "username": "rishubtamirisa",
+    "executable": "/Users/rishubtamirisa/miniforge3/envs/LM-impl/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 228.27386474609375,
+        "used": 212.74436569213867
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 8.0
+    }
+}

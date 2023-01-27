@@ -10,19 +10,20 @@ Same content as train.ipynb
 '''
 
 
-def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu')):
-    wandb.init(
-        # set the wandb project where this run will be logged
-        project="encoder-mlm",
-        
-        # track hyperparameters and run metadata
-        config={
-        "learning_rate": optimizer.defaults['lr'],
-        "architecture": "Transformer",
-        "dataset": "wikitext-2",
-        "epochs": epochs,
-        }
-    )
+def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu'), wandb_log=True):
+    if wandb_log:
+        wandb.init(
+            # set the wandb project where this run will be logged
+            project="encoder-mlm",
+            
+            # track hyperparameters and run metadata
+            config={
+            "learning_rate": optimizer.defaults['lr'],
+            "architecture": "Transformer",
+            "dataset": "wikitext-2",
+            "epochs": epochs,
+            }
+        )
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
     model.train()
     model.to(device)
@@ -31,12 +32,13 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
             cur_batch = 0
             total_batches = len(loader) 
             for batch in loader:
-                input_ids, labels = batch
+                input_ids, labels, attention_mask = batch
                 input_ids = input_ids.to(device, dtype=torch.int64)
                 labels = labels.to(device, dtype=torch.int64)
-                output = model(input_ids)
+                output = model(input_ids, attention_mask.unsqueeze(1).to(device))
                 loss = criterion(output.view(-1, tokenizer.vocab_size), labels.view(-1))
-                wandb.log({"train_loss": loss.item()}, step=cur_batch + (epoch * total_batches))  # Log the loss
+                if wandb_log:
+                    wandb.log({"train_loss": loss.item()}, step=cur_batch + (epoch * total_batches))  # Log the loss
                 loss.backward()
                 optimizer.step()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -51,7 +53,8 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                       'num_heads': num_heads,
                       'state_dict': model.state_dict()}
         torch.save(checkpoint, f'model_checkpoints/checkpoint_E{epoch}.pth')
-        wandb.save(f'model_checkpoints/checkpoint_E{epoch}.pth')  # Save the model checkpoint to wandb
+        if wandb_log:
+            wandb.save(f'model_checkpoints/checkpoint_E{epoch}.pth')  # Save the model checkpoint to wandb
 
 
 
@@ -100,8 +103,9 @@ def load_model_from_checkpoint(checkpoint_path):
 if __name__ == "__main__":
     
     # Look in preprocess/mlm_preprocess.py for the code that retrieves the dataset
-    input_ids, tokenizer = get_dataset_example()
-    mlm_input_ids, mlm_labels = mask_dataset_for_mlm(input_ids, tokenizer)
+    dataset, tokenizer = get_dataset_example()
+    dataset = mask_dataset_for_mlm(dataset, tokenizer)
+    
 
     embed_dim = 512
     model_dim = 512
@@ -109,13 +113,14 @@ if __name__ == "__main__":
     num_heads = 8
     encoder = EncoderModel(vocab_size=tokenizer.vocab_size, embed_dim=embed_dim, model_dim=model_dim, n_layers=n_layers, num_heads=num_heads)
 
-    dataset = TensorDataset( mlm_input_ids, mlm_labels )
+    dataset = TensorDataset( dataset['input_ids'], dataset['labels'], dataset['attention_mask'] )
     loader = DataLoader(dataset, batch_size = 32, shuffle=True)
 
     train_mlm(epochs=4, 
               tokenizer=tokenizer, 
               model=encoder, 
               loader=loader, 
-              optimizer=torch.optim.Adam(encoder.parameters(), lr=1e-4))
+              optimizer=torch.optim.Adam(encoder.parameters(), lr=1e-4),
+              wandb_log=False)
     
    
