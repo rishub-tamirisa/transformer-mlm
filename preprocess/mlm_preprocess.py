@@ -27,7 +27,7 @@ def _generate_bertstyle_mask(input_ids, mlm_probability=0.15):
 '''
 Masks the dataset for MLM (important)
 '''
-def mask_dataset_for_mlm(data, tokenizer, mlm_probability=0.15):
+def mask_dataset_for_mlm(data, vocab_size, mlm_probability=0.15):
     '''
     80% of the time: Replace the word with the
     [MASK] token, e.g., my dog is hairy →
@@ -59,9 +59,9 @@ def mask_dataset_for_mlm(data, tokenizer, mlm_probability=0.15):
         for j in range (mask.shape[0]):
             if mask[j]:
                 if decision[j] < 0.8:
-                    input_ids[i][j] = tokenizer.mask_token_id
+                    input_ids[i][j] = 103
                 elif decision[j] < 0.9:
-                    input_ids[i][j] = torch.randint(0, tokenizer.vocab_size, (1,))[0]
+                    input_ids[i][j] = torch.randint(0, vocab_size, (1,))[0]
                 else:
                     input_ids[i][j] = input_ids[i][j]
             else:
@@ -74,6 +74,14 @@ def mask_dataset_for_mlm(data, tokenizer, mlm_probability=0.15):
 
     data['input_ids'] = input_ids
     data['labels'] = labels
+
+    '''
+    Format of data:
+        dict { 
+            'input_ids': torch.LongTensor,
+            'attention_mask': torch.LongTensor,
+        }
+    '''
     return data
 
 

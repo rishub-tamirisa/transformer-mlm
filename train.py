@@ -104,7 +104,7 @@ if __name__ == "__main__":
     
     # Look in preprocess/mlm_preprocess.py for the code that retrieves the dataset
     dataset, tokenizer = get_dataset_example()
-    dataset = mask_dataset_for_mlm(dataset, tokenizer)
+    dataset = mask_dataset_for_mlm(data=dataset, vocab_size=tokenizer.vocab_size)
     
 
     embed_dim = 512
