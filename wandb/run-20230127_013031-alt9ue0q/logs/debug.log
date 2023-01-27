@@ -25,3 +25,5 @@ config: {'learning_rate': 0.0001, 'architecture': 'Transformer', 'dataset': 'wik
 2023-01-27 01:30:32,972 INFO    MainThread:45747 [wandb_run.py:_redirect():2024] Wrapping output streams.
 2023-01-27 01:30:32,972 INFO    MainThread:45747 [wandb_run.py:_redirect():2046] Redirects installed.
 2023-01-27 01:30:32,972 INFO    MainThread:45747 [wandb_init.py:init():798] run started, returning control to user process
+2023-01-27 02:26:27,267 INFO    MainThread:45747 [wandb_init.py:_pause_backend():391] pausing backend
+2023-01-27 02:26:27,269 INFO    MainThread:45747 [jupyter.py:save_ipynb():379] not saving jupyter notebook
