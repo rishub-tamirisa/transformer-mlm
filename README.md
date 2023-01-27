@@ -20,7 +20,7 @@ Users can check the number of parameters of my implementation and `TransformerEn
 
 
 - The main important function is [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/transformer-mlm/blob/main/preprocess/mlm_preprocess.py) 
-- If you want to use your own data, the repository uses 102 and 103 for `[CLS]` and `[SEP]` tokens, and 0 for `[PAD]` tokens. Tokenizing your dataset following that schema *should* be all that is necessary for processing. 
+- If you want to use your own data, the repository uses 101 and 102 for `[CLS]` and `[SEP]` tokens, and 103 and 0 for `[MASK]` and `[PAD]` tokens. Tokenizing your dataset following that schema *should* be all that is necessary for processing. 
 - ***Important***: It's assumed that your data follows the format before passing to `mask_dataset_for_mlm`:
 ```python
 dict { 
