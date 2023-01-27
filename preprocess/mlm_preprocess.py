@@ -46,39 +46,33 @@ def mask_dataset_for_mlm(dataset, tokenizer, mlm_probability=0.15):
 
     return input_ids, labels
 
+
+
 '''
 Retrieves data from HuggingFace (not important)
 '''
-def get_dataset_example(dataset_name="wikitext", dataset_config_name="wikitext-2-raw-v1"):
+def get_dataset_example(dataset_name="wikitext", dataset_config_name="wikitext-2-raw-v1", max_seq_length=128):
     dataset = load_dataset(dataset_name, dataset_config_name)
     model_checkpoint = "bert-base-uncased"
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
+    text_column_name = "text"
+    
     def tokenize_function(examples):
-        result = tokenizer(examples["text"])
-        if tokenizer.is_fast:
-            result["word_ids"] = [result.word_ids(i) for i in range(len(result["input_ids"]))]
-        return result
+        # Remove empty lines
+        examples[text_column_name] = [
+            line for line in examples[text_column_name] if len(line) > 0 and not line.isspace()
+        ]
+        return tokenizer(
+            examples[text_column_name],
+            padding="max_length",
+            truncation=True,
+            max_length=max_seq_length,
+        )
 
-    tokenized_datasets = dataset.map(
-        tokenize_function, batched=True, remove_columns=["text"]
+    lm_datasets = dataset.map(
+        tokenize_function,
+        batched=True,
+        remove_columns=[text_column_name],
     )
-    chunk_size = 128
-    def group_texts(examples):
-        # Concatenate all texts
-        concatenated_examples = {k: sum(examples[k], []) for k in examples.keys()}
-        # Compute length of concatenated texts
-        total_length = len(concatenated_examples[list(examples.keys())[0]])
-        # We drop the last chunk if it's smaller than chunk_size
-        total_length = (total_length // chunk_size) * chunk_size
-        # Split by chunks of max_len
-        result = {
-            k: [t[i : i + chunk_size] for i in range(0, total_length, chunk_size)]
-            for k, t in concatenated_examples.items()
-        }
-        # Create a new labels column
-        result["labels"] = result["input_ids"].copy()
-        return result
-
-    lm_datasets = tokenized_datasets.map(group_texts, batched=True)
 
     return torch.LongTensor(lm_datasets['train']['input_ids']), tokenizer

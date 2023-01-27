@@ -3,17 +3,31 @@ from preprocess.mlm_preprocess import get_dataset_example, mask_dataset_for_mlm
 from torch.utils.data import TensorDataset, DataLoader
 import torch
 from tqdm import tqdm
+import wandb
 
 '''
 Same content as train.ipynb
 '''
 
+
 def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, device=torch.device('cpu')):
+    wandb.init(
+        # set the wandb project where this run will be logged
+        project="encoder-mlm",
+        
+        # track hyperparameters and run metadata
+        config={
+        "learning_rate": optimizer.defaults['lr'],
+        "architecture": "Transformer",
+        "dataset": "wikitext-2",
+        "epochs": epochs,
+        }
+    )
     criterion = torch.nn.CrossEntropyLoss(ignore_index=-100)
-    model.to(device)
     model.train()
+    model.to(device)
     with tqdm(total=epochs) as pbar:
-        for _ in range(epochs):
+        for epoch in range(epochs):
             cur_batch = 0
             total_batches = len(loader) 
             for batch in loader:
@@ -22,19 +36,23 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
                 labels = labels.to(device, dtype=torch.int64)
                 output = model(input_ids)
                 loss = criterion(output.view(-1, tokenizer.vocab_size), labels.view(-1))
+                wandb.log({"train_loss": loss.item()}, step=cur_batch + (epoch * total_batches))  # Log the loss
                 loss.backward()
                 optimizer.step()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 optimizer.zero_grad()
                 cur_batch += 1
-                pbar.set_postfix(**{"batch: ": f"{cur_batch} / {total_batches}", "loss:": loss.item()})
+                pbar.set_postfix(**{f"Epoch {epoch} / batch: ": f"{cur_batch} / {total_batches}", "loss:": loss.item()})
+        
         checkpoint = {'vocab_size': tokenizer.vocab_size,
                       'embed_dim': embed_dim,
                       'model_dim': model_dim,
                       'n_layers': n_layers,
                       'num_heads': num_heads,
                       'state_dict': model.state_dict()}
-        torch.save(checkpoint, 'model_checkpoints/checkpoint.pth')
+        torch.save(checkpoint, f'model_checkpoints/checkpoint_E{epoch}.pth')
+        wandb.save(f'model_checkpoints/checkpoint_E{epoch}.pth')  # Save the model checkpoint to wandb
+
 
 
 # model.to('cuda')  # if you have gpu

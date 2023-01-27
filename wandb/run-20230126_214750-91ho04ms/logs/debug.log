@@ -25,3 +25,5 @@ config: {'learning_rate': 0.02, 'architecture': 'Transformer', 'dataset': 'wikit
 2023-01-26 21:47:52,422 INFO    MainThread:33571 [wandb_run.py:_redirect():2024] Wrapping output streams.
 2023-01-26 21:47:52,422 INFO    MainThread:33571 [wandb_run.py:_redirect():2046] Redirects installed.
 2023-01-26 21:47:52,422 INFO    MainThread:33571 [wandb_init.py:init():798] run started, returning control to user process
+2023-01-26 23:33:12,745 INFO    MainThread:33571 [wandb_init.py:_pause_backend():391] pausing backend
+2023-01-26 23:33:12,749 INFO    MainThread:33571 [jupyter.py:save_ipynb():379] not saving jupyter notebook
