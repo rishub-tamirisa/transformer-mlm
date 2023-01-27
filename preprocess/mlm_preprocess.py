@@ -37,18 +37,20 @@ def mask_dataset_for_mlm(dataset, tokenizer, mlm_probability=0.15):
                 elif decision[j] < 0.9:
                     input_ids[i][j] = torch.randint(0, tokenizer.vocab_size, (1,))[0]
                 else:
-                    pass
+                    input_ids[i][j] = input_ids[i][j]
             else:
                 input_ids[i][j] = input_ids[i][j]
                 labels[i][j] = -100
+        # assert that every row of labels has at least one -100 in it
+        assert torch.sum(labels[i] == -100) > 0
 
     return input_ids, labels
 
 '''
 Retrieves data from HuggingFace (not important)
 '''
-def get_dataset_example():
-    dataset = load_dataset("wikitext", "wikitext-2-raw-v1")
+def get_dataset_example(dataset_name="wikitext", dataset_config_name="wikitext-2-raw-v1"):
+    dataset = load_dataset(dataset_name, dataset_config_name)
     model_checkpoint = "bert-base-uncased"
     tokenizer = AutoTokenizer.from_pretrained(model_checkpoint)
     def tokenize_function(examples):

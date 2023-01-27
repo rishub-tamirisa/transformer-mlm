@@ -40,7 +40,7 @@ def train_mlm(epochs, model, tokenizer, loader, optimizer=torch.optim.Adam, devi
 # model.to('cuda')  # if you have gpu
 
 
-def predict_masked_sent(model, text, top_k=5):
+def predict_masked_sent(model, tokenizer, text, top_k=5):
     '''
     Masked token inference. Credit: https://gist.github.com/yuchenlin/a2f42d3c4378ed7b83de65c7a2222eb2
     '''
@@ -57,7 +57,7 @@ def predict_masked_sent(model, text, top_k=5):
         outputs = model(tokens_tensor)
         predictions = outputs[0]
 
-    probs = torch.nn.functional.softmax(predictions[0, masked_index], dim=-1)
+    probs = torch.nn.functional.softmax(outputs, dim=-1)[0, masked_index]
     top_k_weights, top_k_indices = torch.topk(probs, top_k, sorted=True)
 
     for i, pred_idx in enumerate(top_k_indices):
