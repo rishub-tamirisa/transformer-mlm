@@ -47,7 +47,7 @@ class MultiHeadAttention(nn.Module):
         '''
         # QKV weight matrices -> (seq_len, embed_dim) x (embed_dim, model_dim) = (seq_len, model_dim)
         out = torch.cat([self.attention(Q(query), K(key), V(value), mask) for Q, K ,V in self.qkv_weights_list], dim=-1)
-        # Shape(out) -> (seq_len, (model_dim * num_heads))
+        # Shape(out) -> (seq_len, (head_dim * num_heads))
         out = self.out_proj(out)
         return self.dropout(out)
 
