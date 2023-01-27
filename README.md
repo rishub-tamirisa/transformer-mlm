@@ -6,7 +6,7 @@ For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTor
 
 This repo is not an attempt to replicate SOTA, but to experiment/play with the model. Feel free to adjust the hyperparameters/model config to anything.
 
-With that being said, exact attention is computed in this implementation. Users can check the number of parameters of my implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
+Users can check the number of parameters of my implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
 
 ### Repository Structure
 
