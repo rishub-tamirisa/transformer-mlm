@@ -1,4 +1,4 @@
-# [WIP] Masked Language Modeling with Transformer Encoders
+# [WIP] BERT-Style Masked Language Modeling with Transformer Encoders
 
 For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing implementation intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
 
@@ -6,17 +6,19 @@ For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTor
 
 This repo is not an attempt to replicate SOTA, but to experiment/play with the model. Feel free to adjust the hyperparameters/model config to anything.
 
-With that being said, exact attention is computed in this implementation. Users can check the number of parameters of my implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
+Users can check the number of parameters of my implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
 
 ### Repository Structure
 
 - [modules](https://github.com/rishub-tamirisa/language-model-impl/tree/main/modules) contains the implementation of important Transformer encoder submodules, i.e. `MultiHeadAttention`.
 
-- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains functions for preparing masked language model training. For a full understanding of the implementation, it would be important to read through [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/language-model-impl/blob/da81c342021b53e8589bc60945bc40bc326e3b7d/preprocess/mlm_preprocess.py#L8).
+- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains functions for preparing masked language model training. For a full understanding of the implementation, it would be important to read through [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/transformer-mlm/blob/main/preprocess/mlm_preprocess.py).
 
 ### Reproducibility
 
 `train.ipynb` provides a complete notebook for loading a dataset and training the model.
+
+Completed training runs can be viewed at the [wandb project](https://wandb.ai/rishubtamirisa/encoder-mlm?workspace=user-rishubtamirisa)
 
 #### Example
 
