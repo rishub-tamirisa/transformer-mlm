@@ -31,7 +31,7 @@ dict {
 
 - `train.ipynb` provides a complete notebook for loading a dataset and training the model.
 
-- Completed training runs can be viewed at the [wandb project](https://wandb.ai/rishubtamirisa/encoder-mlm?workspace=user-rishubtamirisa)
+- Training runs can be viewed at the [wandb project](https://wandb.ai/rishubtamirisa/encoder-mlm?workspace=user-rishubtamirisa). These are just for fun because SOTA cannot be achieved without actual resources and a lot of time.
 
 #### Example
 
