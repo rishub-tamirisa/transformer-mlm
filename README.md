@@ -10,7 +10,7 @@ Users can check the number of parameters of this implementation and `Transformer
 
 - [modules](https://github.com/rishub-tamirisa/language-model-impl/tree/main/modules) contains the implementation of important Transformer encoder submodules, i.e. `MultiHeadAttention`.
 
-- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains all functions for preparing masked language model training. This code also includes a function for retrieving data from HuggingFace. Although this may seem contradictory to the goal of this repository, implementing dataset preparation tasks for NLP like tokenization would add a ton of extra code. For this reason, I refer to HuggingFace for dataset retrieval and tokenization. See notes below for using your own data. 
+- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains all functions for preparing masked language model training. This code also includes a function for retrieving data from HuggingFace. Implementing dataset preparation tasks for NLP like tokenization would add a ton of extra code. For this reason, I refer to HuggingFace for dataset retrieval and tokenization. See notes below for using your own data. 
 
 ### Reproducibility
 
