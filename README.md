@@ -1,14 +1,10 @@
 # BERT-Style Masked Language Modeling with Transformer Encoders
 
-The purpose of this repository is to provide a easily-readable / beginner-friendly implementation of a Transformer Encoder and demonstrate Masked Language Modeling as described in the BERT paper, all in PyTorch.
+The purpose of this repository is to provide a easily-readable / beginner-friendly implementation of a Transformer Encoder and demonstrate Masked Language Modeling as described in the BERT paper in PyTorch.
 
 For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing implementation intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
 
-**Disclaimer**: The code in this repository is **not** intended for production use, although some elements/computation may serve as an inspiration. The implementation emphasizes readability w.r.t the original Transformer Paper, ["Attention is All You Need" (Vaswani, et al. 2017)](https://arxiv.org/abs/1706.03762) and [BERT](https://arxiv.org/abs/1810.04805) rather than efficiency. Primarily, this code is meant to demonstrate Masked Language Modeling for encoders, whereas commonly-used implementations in PyTorch or HuggingFace contain substantially more configurable parameters for API flexibility for use in other downstream tasks.
-
-Users can check the number of parameters of my implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
-
-
+Users can check the number of parameters of this implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
 
 ### Repository Structure
 
@@ -20,10 +16,10 @@ Users can check the number of parameters of my implementation and `TransformerEn
 
 
 - The main important function is [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/transformer-mlm/blob/main/preprocess/mlm_preprocess.py) 
-- If you want to use your own data, the repository uses 101 and 102 for `[CLS]` and `[SEP]` tokens, and 103 and 0 for `[MASK]` and `[PAD]` tokens. Tokenizing your dataset following that schema *should* be all that is necessary for processing. 
-- ***Important***: It's assumed that your data follows the format before passing to `mask_dataset_for_mlm`:
+- If you want to use your own data, the repository uses 101 and 102 for `[CLS]` and `[SEP]` tokens, and 103 and 0 for `[MASK]` and `[PAD]` tokens. Tokenizing your dataset following that schema should be all that is necessary for processing. 
+- It's assumed that your data follows the format before passing to `mask_dataset_for_mlm`:
 ```python
-dict { 
+{ 
   'input_ids': torch.LongTensor,
   'attention_mask': torch.LongTensor,
 }
