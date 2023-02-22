@@ -40,10 +40,9 @@ def mask_dataset_for_mlm(data, vocab_size, mlm_probability=0.15):
     representation towards the actual observed
     word.
 
-    BERT-style masking: (currently decides masking at sequence level but should be at token level)
+    BERT-style masking:
     '''
     # create mask array with true values appearing `mlm_probability`` of the time
-    # mask_arr = (rand < mlm_probability) * (dataset != 101) * (dataset != 102) * (dataset != 0)
     dataset = data['input_ids']
     input_ids = dataset.clone()
     labels = dataset.clone()
