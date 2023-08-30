@@ -27,8 +27,6 @@ Users can check the number of parameters of this implementation and `Transformer
 
 - `train.ipynb` provides a complete notebook for loading a dataset and training the model.
 
-- Training runs can be viewed at the [wandb project](https://wandb.ai/rishubtamirisa/encoder-mlm?workspace=user-rishubtamirisa). These are just for fun because SOTA cannot be achieved without actual resources and a lot of time.
-
 #### Example
 
 To run training in a separate script, the following format can be used.
