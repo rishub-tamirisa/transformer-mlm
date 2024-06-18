@@ -1,34 +1,3 @@
-# BERT-Style Masked Language Modeling with Transformer Encoders
-
-The purpose of this repository is to provide a easily-readable / beginner-friendly implementation of a Transformer Encoder and demonstrate Masked Language Modeling as described in the BERT paper in PyTorch.
-
-For newcomers to NLP, it can be daunting to sift through the HuggingFace / PyTorch boilerplate for an understanding of different NN implementations. Often times, important model functions are hidden behind clever abstractions used by the library API for flexibility, which comes at the cost of readability. Additionally, a lot of YouTube videos covering this implementation tend to simply re-read the paper without providing implementation intuition, or when it comes to downstream tasks like MLM, simply applying HuggingFace functions without showing the inner workings.
-
-Users can check the number of parameters of this implementation and `TransformerEncoder` from PyTorch with the same config and verify that they are the same.
-
-### Repository Structure
-
-- [modules](https://github.com/rishub-tamirisa/language-model-impl/tree/main/modules) contains the implementation of important Transformer encoder submodules, i.e. `MultiHeadAttention`.
-
-- [preprocess](https://github.com/rishub-tamirisa/language-model-impl/tree/main/preprocess) contains all functions for preparing masked language model training. This code also includes a function for retrieving data from HuggingFace. Implementing dataset preparation tasks for NLP like tokenization would add a ton of extra code. For this reason, I refer to HuggingFace for dataset retrieval and tokenization. See notes below for using your own data. 
-
-### Reproducibility
-
-
-- The main important function is [`mask_dataset_for_mlm`](https://github.com/rishub-tamirisa/transformer-mlm/blob/main/preprocess/mlm_preprocess.py) 
-- If you want to use your own data, the repository uses 101 and 102 for `[CLS]` and `[SEP]` tokens, and 103 and 0 for `[MASK]` and `[PAD]` tokens. Tokenizing your dataset following that schema should be all that is necessary for processing. 
-- It's assumed that your data follows the format before passing to `mask_dataset_for_mlm`:
-```python
-{ 
-  'input_ids': torch.LongTensor,
-  'attention_mask': torch.LongTensor,
-}
-```
-
-- `train.ipynb` provides a complete notebook for loading a dataset and training the model.
-
-#### Example
-
 To run training in a separate script, the following format can be used.
 
 ```python 
